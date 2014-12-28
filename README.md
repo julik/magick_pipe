@@ -1,4 +1,4 @@
-# magick_pipeline
+# magick_pipe
 
 **WARNING: this is a proof-of-concept/experimental library. Expect things to break.**
 
