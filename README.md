@@ -6,7 +6,7 @@ Serialize RMagick operations into a processing pipeline that can be executed out
 
 To set up a processing pipe:
 
-    script = MagickPipeline.new("/Users/julik/VFX_Projectery/MattePaintings/IMG_9500.psd", frame: 0)
+    script = MagickPipe.new("/Users/julik/VFX_Projectery/MattePaintings/IMG_9500.psd", frame: 0)
     script.auto_orient
     script.strip!
     script.geometry! '512x512'
@@ -32,7 +32,7 @@ that has been spun up.
 
 ## Calling convention
 
-Every method that is available on a `Magick::Image` object is available in the `MagickPipeline`
+Every method that is available on a `Magick::Image` object is available in the `MagickPipe`
 object. Blocks will be preserved where possible. Since `change_geometry` with the default block is
 used so often it is made available under 
 
