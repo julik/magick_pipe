@@ -1,8 +1,6 @@
 require 'RMagick'
-
+require_relative 'version'
 class MagickPipe
-  VERSION = '0.0.1'
-  
   NOOP_PROC = Proc.new {} # To prevent allocating new Procs every time we have a method with no Proc
   
   # Initialize a processing script with a path to the source file and the frame to use.

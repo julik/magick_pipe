@@ -12,8 +12,10 @@ end
 require 'rake'
 
 require 'jeweler'
+require_relative 'lib/version'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
+  gem.version = MagickPipe::VERSION
   gem.name = "magick_pipe"
   gem.homepage = "http://github.com/julik/magick_pipe"
   gem.license = "MIT"
