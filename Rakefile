@@ -21,6 +21,8 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{ and run them in a forked subprocess, later }
   gem.email = "me@julik.nl"
   gem.authors = ["Julik Tarkhanov"]
+  # Remove the huge PSD
+  gem.files.exclude "spec/*.psd"
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
