@@ -24,7 +24,7 @@ of the processing will be deallocated using `Magick::Image#destroy!` at the end 
 
 Well, you could do this (using [exceptional_fork](https://github.com/julik/exceptional_fork)):
 
-  ExceptionalFork.fork_and_wait { script.execute! }
+    ExceptionalFork.fork_and_wait { script.execute! }
   
 This will put all the image allocations _outside_ of your main Ruby process. This will ensure
 that the fabulous RMagick memory leaks or bad deallocations will die together with the process
