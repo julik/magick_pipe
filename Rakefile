@@ -19,8 +19,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "magick_pipe"
   gem.homepage = "http://github.com/julik/magick_pipe"
   gem.license = "MIT"
-  gem.summary = %Q{ Serialize RMagick processing steps }
-  gem.description = %Q{ and run them in a forked subprocess, later }
+  gem.summary = %Q{ Serialize RMagick processing steps and run them in a forked subprocess, later }
+  gem.description = %Q{ Serialize RMagick processing steps and run them in a forked subprocess, later }
   gem.email = "me@julik.nl"
   gem.authors = ["Julik Tarkhanov"]
   # Remove the huge PSD
