@@ -52,6 +52,7 @@ class MagickPipe
     return super unless respond_to?(m)
     proc_block = block_given? ? Proc.new : NOOP_PROC
     @steps << [m, a, proc_block]
+    self # for chaining
   end
 end
 

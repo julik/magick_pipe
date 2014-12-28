@@ -57,16 +57,11 @@ describe "MagickPipe" do
     expect(image.columns).to be <= 64
   end
   
-  it 'resizes and sharpens the PSD file using geometry!' do
+  it 'resizes and sharpens the PSD file using chained calls' do
     path = File.dirname(__FILE__) + '/IMG_3241.psd'
     
     subject = MagickPipe.new(path)
-    subject.geometry! '64x64'
-    subject.sharpen 0.0, 0.85
-    subject.write('out.png')
-    
-    expect(File).not_to be_exist('out.png')
-    subject.execute!
+    subject.geometry!('64x64').sharpen(0.0, 0.85).write('out.png').execute!
     expect(File).to be_exist('out.png')
     
     image = Magick::Image.read('out.png')[0]
