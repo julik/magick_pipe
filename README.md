@@ -30,16 +30,16 @@ This will put all the image allocations _outside_ of your main Ruby process. Thi
 that the fabulous RMagick memory leaks or bad deallocations will die together with the process
 that has been spun up.
 
-## Future problems
-
-The idea is to be able to actually _serialize_ the whole processing pipe so that it can be
-passed via JSON or a query string.
- 
 ## Calling convention
 
 Every method that is available on a `Magick::Image` object is available in the `MagickPipeline`
 object. Blocks will be preserved where possible. Since `change_geometry` with the default block is
 used so often it is made available under 
+
+## Future problems
+
+The idea is to be able to actually _serialize_ the whole processing pipe so that it can be
+passed via JSON or a query string.
 
 ## Contributing to image_pipeline
  
