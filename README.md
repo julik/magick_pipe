@@ -12,7 +12,12 @@ To set up a processing pipe:
     script.geometry! '512x512'
     script.sharpen 0.0, 0.85
     script.write("/Users/julik/VFX_Projectery/MattePaintings/IMG_9500_tiny.png")
-  
+
+You can also chain calls, like so (every proxied method for a `Magick::Image` operation returns
+`self`):
+
+    script.auto_orient.geometry!('512x512')
+
 No images are allocated at this point. Only when you call
 
     script.execute!
