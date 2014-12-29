@@ -34,7 +34,7 @@ that has been spun up.
 
 Every method that is available on a `Magick::Image` object is available in the `MagickPipe`
 object. Blocks will be preserved where possible. Since `change_geometry` with the default block is
-used so often it is made available under 
+used so often it is made available under `geometry!(geometry_string)`
 
 ## Future problems
 
